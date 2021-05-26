@@ -1,0 +1,56 @@
+.form {
+  display: block;
+  width: 300px;
+  padding: 15px;
+  border: 1.5px solid rgb(128, 127, 127);
+}
+
+label,
+button {
+  display: flex;
+}
+
+.label,
+.input {
+  flex-direction: column;
+}
+
+.input {
+  width: 250px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input:invalid {
+  border: 1px solid rgb(65, 64, 64);
+  border-radius: 4px;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(
+    to right,
+    rgb(221, 219, 219),
+    rgb(165, 167, 165)
+  );
+}
+
+input:valid {
+  border: 1.5px solid rgb(128, 127, 127);
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button {
+  transition: 0.35s;
+}
+
+.button:hover {
+  background-color: rgb(114, 114, 114);
+  color: white;
+}

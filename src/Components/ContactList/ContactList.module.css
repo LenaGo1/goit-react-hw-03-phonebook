@@ -1,0 +1,23 @@
+.list {
+  width: 300px;
+  padding-inline-start: 0px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact {
+  margin-right: 10px;
+}
+
+.button {
+  transition: 0.35s;
+}
+
+.button:hover {
+  background-color: rgb(114, 114, 114);
+  color: white;
+}

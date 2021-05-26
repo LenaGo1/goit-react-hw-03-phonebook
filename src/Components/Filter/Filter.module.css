@@ -1,0 +1,25 @@
+.label,
+.input {
+  flex-direction: column;
+}
+.filter {
+  display: inline-block;
+}
+
+.label,
+.button {
+  display: inline-block;
+}
+
+.input {
+  width: 250px;
+}
+
+.button {
+  transition: 0.35s;
+}
+
+.button:hover {
+  background-color: rgb(114, 114, 114);
+  color: white;
+}
