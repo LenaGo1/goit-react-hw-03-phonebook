@@ -16,6 +16,28 @@ class App extends Component {
         filter:''
     }    
     
+    componentDidMount() {
+        console.log('App component did mount');
+        const contacts = localStorage.getItem('contacts');
+        
+        const parsedContacts = JSON.parse(contacts);
+        
+        //если есть распарсенные контакты из localStorage (т.е. если в lS лежат контакты
+        //- тогда передаются они в state
+        if (parsedContacts) {
+            this.setState({ contacts: parsedContacts })
+        }
+    }
+    
+    componentDidUpdate(prevProps, prevState) {
+        console.log('App component did update');
+        
+        if (this.state.contacts !== prevState.contacts) {
+            console.log('Обновилось поле contacts, записываю todos в хранилище');
+            localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
+        }
+    }
+
     addContact = (newContact) => {        
         newContact['id'] = shortid.generate();
         this.state.contacts.some(contact => contact.name === newContact.name)

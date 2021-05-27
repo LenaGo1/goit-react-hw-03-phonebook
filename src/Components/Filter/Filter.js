@@ -4,7 +4,7 @@ import styles from './Filter.module.css'
 
 
 const Filter = ({ value, onChange, onClick }) => (
-    <div class = {styles.filter}>
+    <div className = {styles.filter}>
     <label className = {styles.label}>Find contacts by name 
                     <input
                         className = {styles.input}
@@ -24,7 +24,6 @@ const Filter = ({ value, onChange, onClick }) => (
 Filter.propTypes = {
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    onBlur:PropTypes.func.isRequired
 }
 
 export default Filter;
